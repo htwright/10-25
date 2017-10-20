@@ -7,6 +7,9 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using System;
+using Microsoft.AspNetCore.Hosting;
+using System.IO;
 
 namespace hidive_homework
 {
@@ -14,12 +17,22 @@ namespace hidive_homework
     {
         public static void Main(string[] args)
         {
-            BuildWebHost(args).Run();
-        }
+            var host = new WebHostBuilder()
+              .UseKestrel()
+              .UseContentRoot(Directory.GetCurrentDirectory())
+              .UseIISIntegration()
+              .UseStartup<Startup>()
+              .Build();
 
-        public static IWebHost BuildWebHost(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>()
-                .Build();
+            host.Run();
+        }
     }
 }
+
+
+    //     public static IWebHost BuildWebHost(string[] args) =>
+    //         WebHost.CreateDefaultBuilder(args)
+    //             .UseStartup<Startup>()
+    //             .Build();
+    // }
+

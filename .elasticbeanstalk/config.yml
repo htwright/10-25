@@ -1,0 +1,21 @@
+branch-defaults:
+  master:
+    environment: 10-25-dev
+    group_suffix: null
+environment-defaults:
+  10-25-dev:
+    branch: master
+    repository: 10-25
+global:
+  application_name: 10-25
+  branch: master
+  default_platform: IIS 10.0
+  default_region: us-west-2
+  include_git_submodules: true
+  instance_profile: null
+  platform_name: null
+  platform_version: null
+  profile: eb-cli
+  repository: 10-25
+  sc: git
+  workspace_type: Application

@@ -7,7 +7,7 @@ using MongoDB.Driver;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using Newtonsoft.Json;
-using MongoDB.Driver.Builders;
+// using MongoDB.Driver.Builders;
 
 namespace hidive_homework.Controllers
 {
@@ -16,24 +16,14 @@ namespace hidive_homework.Controllers
     {
 
         [HttpGet]
-        // public IEnumerable<TitleRow> Get()
-        public async Task<List<BsonDocument>> Get()
+        public async Task<string> Get()
         {
             var client = new MongoClient("mongodb://admin:admin@ds227865.mlab.com:27865/hidive");
             var database = client.GetDatabase("hidive");
             var collection = database.GetCollection<BsonDocument>("TitleRows");
-            // var document = collection.Find(new BsonDocument()).FirstOrDefault();
-            // var document = await collection.Find(new BsonDocument()).FirstOrDefaultAsync();
-            var documents = await collection.Find(new BsonDocument()).ToListAsync().setFields(Fields.Include(fields).Exclude("_id"));
-            // string rc = document.ToJson<MongoDB.Bson.BsonDocument>();
-            // string obj = JsonConvert.DeserializeObject<TitleRow>(document);
-            // Console.WriteLine(document.ToString());
-            // var data = collection.FindOneAs<TitleRow>();
-            // Console.WriteLine(data.ToString());
-
-            
-
-            return documents;
+            var result = await collection.Find(new BsonDocument()).Project(Builders<BsonDocument>.Projection.Exclude("_id")).ToListAsync();
+            var obj = result.ToJson();
+            return obj;
 
         }
 

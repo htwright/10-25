@@ -146,6 +146,19 @@
       "integrity": "sha512-2YNL0jXYuN7w07mb1sMZQ6T6zOvGi83v8UbjhBZ8mhvI1VkQ2STU9XOrTFyvWswMyh5rW1evS+e7qltYJvTqPA==",
       "dev": true
     },
+    "@types/lodash": {
+      "version": "4.14.78",
+      "resolved": "https://registry.npmjs.org/@types/lodash/-/lodash-4.14.78.tgz",
+      "integrity": "sha512-AflcpYyLyf/VIgSJbG/WMx7Bk00UejtSjYUW176K7erXChVcZENFdgOKOKfOXX9MmcXKoZW1QVFbqYapkhn1rA=="
+    },
+    "@types/lodash.isequal": {
+      "version": "4.5.2",
+      "resolved": "https://registry.npmjs.org/@types/lodash.isequal/-/lodash.isequal-4.5.2.tgz",
+      "integrity": "sha512-RBgio5IF9ND5Sw7pIivcC47oLY65f5UQCblnjVoGLR5wykwSRd/q0k6aUroXMGZfu8jnyJbNhzNC+NcFUnJ8pA==",
+      "requires": {
+        "@types/lodash": "4.14.78"
+      }
+    },
     "@types/webpack-env": {
       "version": "1.13.0",
       "resolved": "https://registry.npmjs.org/@types/webpack-env/-/webpack-env-1.13.0.tgz",
@@ -2864,6 +2877,11 @@
       "resolved": "https://registry.npmjs.org/lodash.camelcase/-/lodash.camelcase-4.3.0.tgz",
       "integrity": "sha1-soqmKIorn8ZRA1x3EfZathkDMaY="
     },
+    "lodash.isequal": {
+      "version": "4.5.0",
+      "resolved": "https://registry.npmjs.org/lodash.isequal/-/lodash.isequal-4.5.0.tgz",
+      "integrity": "sha1-QVxEePK8wwEgwizhDtMib30+GOA="
+    },
     "lodash.memoize": {
       "version": "4.1.2",
       "resolved": "https://registry.npmjs.org/lodash.memoize/-/lodash.memoize-4.1.2.tgz",
@@ -3105,6 +3123,15 @@
       "resolved": "https://registry.npmjs.org/negotiator/-/negotiator-0.6.1.tgz",
       "integrity": "sha1-KzJxhOiZIQEXeyhWP7XnECrNDKk=",
       "dev": true
+    },
+    "ng2-carouselamos": {
+      "version": "3.2.0",
+      "resolved": "https://registry.npmjs.org/ng2-carouselamos/-/ng2-carouselamos-3.2.0.tgz",
+      "integrity": "sha512-WG5rNL84vo89e5038AqFrvapBVqz2BjRGv2vduJd6OR+Nt/RPfFyEDQd8SfNqHlNAmZqpnCK7puAUldDjcqh7g==",
+      "requires": {
+        "@types/lodash.isequal": "4.5.2",
+        "lodash.isequal": "4.5.0"
+      }
     },
     "no-case": {
       "version": "2.3.1",

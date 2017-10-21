@@ -10,6 +10,9 @@ import { HomeComponent } from './components/home/home.component';
 import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { CounterComponent } from './components/counter/counter.component';
 import { HidiveComponent } from './components/hidive/hidive.component';
+import { Ng2CarouselamosModule } from 'ng2-carouselamos';
+import { CarouselComponent } from './components/carousel/carousel.component';
+
 
 @NgModule({
     declarations: [
@@ -18,12 +21,14 @@ import { HidiveComponent } from './components/hidive/hidive.component';
         CounterComponent,
         FetchDataComponent,
         HomeComponent,
-        HidiveComponent
+        HidiveComponent,
+        CarouselComponent
     ],
     imports: [
         CommonModule,
         HttpModule,
         FormsModule,
+        Ng2CarouselamosModule,        
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },

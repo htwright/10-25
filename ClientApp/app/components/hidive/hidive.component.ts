@@ -3,7 +3,13 @@ import { Http } from '@angular/http';
 
 @Component({
     selector: 'hidive',
-    templateUrl: './hidive.component.html'
+    templateUrl: './hidive.component.html',
+    styles: [`
+    .slides{
+      display:flex;
+      flex:1;
+    }
+    `]
 })
 export class HidiveComponent {
     public TitleRows: TitleRow[];
@@ -16,7 +22,7 @@ export class HidiveComponent {
     }
 }
 
-interface TitleRow {
+export interface TitleRow {
   Name: string;
   Titles: object[];
 

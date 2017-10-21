@@ -1,11 +1,12 @@
 <p *ngIf="!TitleRows"><em>Loading...</em></p>
 
-<div *ngFor="let row of TitleRows">
-  <div class="{{row.Name}}">
+<div *ngFor="let row of TitleRows" id="container">
+  <div class="{{row.Name}}" >
     <h1>{{row.Name}}</h1>
-    <ul *ngFor="let title of row.Titles">
-      <li>{{title.Id}}</li>
-    </ul>
+    <div class="slides">
+        <carousel [arr]="row.Titles"></carousel>
+        
+    </div>
   </div>
 
 </div>
@@ -25,3 +26,5 @@
         </tr>
     </tbody>
 </table> -->
+
+

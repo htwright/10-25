@@ -9,6 +9,11 @@ import { Http } from '@angular/http';
       display:flex;
       flex:1;
     }
+    #container:nth-child(1){
+    margin-top: 20em;
+    }
+    
+
     `]
 })
 export class HidiveComponent {

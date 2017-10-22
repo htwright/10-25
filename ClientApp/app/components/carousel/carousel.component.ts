@@ -9,11 +9,5 @@ export class CarouselComponent {
   items:Array<any> = [];
   constructor(){
     this.items = this.arr;
-    console.log(this.items, this.arr);
   }
-  public currentCount = 0;
-
-    public incrementCounter() {
-        this.currentCount++;
-    }
 }
